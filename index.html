@@ -9,45 +9,69 @@
             margin: 0;
         }
         .contenedor-flexible{
+            background-color: grey;
             display: flex;
+            height: 100vh; 
             flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+        .contenedor-flexible-dostres{
+            background-color: rgb(25, 197, 22);
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .elemento-flexible{
+            font-size: 5rem;
+            color: white;
         }
         .uno{
             background-color: red;
-            width: 250px;
-            height: 150px;
+            flex-basis: 50%;
+            flex-grow: 1;
+            flex-shrink: 1;
+            height: 100vh;
+            background-image: url("/imgs/hamred.jpg");
+            background-position: left;
         }
         .dos{
-            background-color: orange;
-            width: 250px;
-            height: 50px;
+            background-color: blue;
+            flex-basis: 50vh;
+            flex-grow: 1;
+            flex-shrink: 1;
+            height: 250px;
+            background-image: url("/imgs/papsgreen.jpg");
+            background-position: left;
         }
         .tres{
-            background-color: blue;
-            width: 250px;
-            height: 350px;
-        }
-        .cuatro{
             background-color: green;
-            width: 250px;
-            height: 20px;
+            flex-basis: 50vh;
+            flex-grow: 1;
+            flex-shrink: 1;
+            height: 250px;
+            background-image: url("/imgs/hamgreen.jpg");
+            background-position: left;
         }
-        .cinco{
-            background-color: violet;
-            width: 250px;
-            height: 200px;
+        .opaco{
+            background-color: rgba(0, 0, 0, 0.636);
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
     <div class="contenedor-flexible">
-        <div class="elemento-flexible uno">1</div>
-        <div class="elemento-flexible dos">2</div>
-        <div class="elemento-flexible tres">3</div>
-        <div class="elemento-flexible cuatro">4</div>
-        <div class="elemento-flexible cinco">5</div>
+        <div class="elemento-flexible uno">
+            <div class="opaco"></div>
+        </div>
+        
+        <div class="contenedor-flexible-dostres">
+            <div class="elemento-flexible dos"></div>
+            <div class="elemento-flexible tres"></div>
+        </div>
     </div>
 </body>
 </html>
